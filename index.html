@@ -1,40 +1,23 @@
-<!doctype html>
-<html>
-  <head>
-    <meta charset="utf-8" />
-    <title>Test</title>
-  </head>
-  <body>
-    <h1>✅ GitHub Pages is working</h1>
-    <p>If you can see this, your site is live.</p>
-  </body>
-</html>
-
-
-
-
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Do you miss nayo?</title>
+<title>Do you miss nayo?</title>
 
-    <!-- EmailJS -->
-    <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
 
-    <style>
-        body {
-            font-family: Arial;
-            text-align: center;
-            margin-top: 100px;
-        }
+<style>
+body{
+font-family:Arial;
+text-align:center;
+margin-top:100px;
+}
 
-        button {
-            font-size: 20px;
-            padding: 10px 20px;
-            margin: 20px;
-            position: relative;
-        }
-    </style>
+button{
+font-size:20px;
+padding:10px 20px;
+margin:20px;
+}
+</style>
 </head>
 
 <body>
@@ -46,48 +29,42 @@
 
 <script>
 
-// EmailJS init
 emailjs.init("LxJ0BfwR1ueAZcI4TEHyi");
 
-function yesClicked() {
+function yesClicked(){
 
-    // ✅ NEW MESSAGE
-    alert("that was ur only option anyway azzin");
+alert("that was ur only option anyway azzin");
 
-    // send email
-    emailjs.send("service_0i9eiqi","template_daxbvrx",{
-        name: "Someone",
-        message: "Someone clicked YES on 'Do you miss nayo?'"
-    })
-    .then(function() {
-        console.log("Email sent!");
-    })
-    .catch(function(error) {
-        console.log(error);
-    });
+emailjs.send("service_0i9eiqi","template_daxbvrx",{
+name:"Someone",
+message:"Someone clicked YES 😈"
+});
+
 }
 
-const noBtn = document.getElementById("noBtn");
-const yesBtn = document.getElementById("yesBtn");
+const noBtn=document.getElementById("noBtn");
+const yesBtn=document.getElementById("yesBtn");
 
-let yesSize = 20;
+let yesSize=20;
 
-noBtn.addEventListener("mouseover", function() {
+noBtn.addEventListener("mouseover",function(){
 
-    const x = Math.random() * (window.innerWidth - 100);
-    const y = Math.random() * (window.innerHeight - 50);
+const x=Math.random()*(window.innerWidth-100);
+const y=Math.random()*(window.innerHeight-50);
 
-    noBtn.style.position = "absolute";
-    noBtn.style.left = x + "px";
-    noBtn.style.top = y + "px";
+noBtn.style.position="absolute";
+noBtn.style.left=x+"px";
+noBtn.style.top=y+"px";
 
-    // YES button grows
-    yesSize += 5;
-    yesBtn.style.fontSize = yesSize + "px";
+yesSize+=5;
+yesBtn.style.fontSize=yesSize+"px";
+
 });
 
 </script>
 
 </body>
 </html>
+
+
 
